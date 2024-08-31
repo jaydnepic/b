@@ -7,7 +7,7 @@ except ImportError:
     os.system("pip install colorama requests zipfile webbrowser ")
 print("all libraries installed and working, opening loader.")
 time.sleep(1)
-vers = 2
+vers = 3
 os.system("cls")
 
 current_version = requests.get("https://raw.githubusercontent.com/jaydnepic/b/main/bb.txt").json()
@@ -17,18 +17,18 @@ elif vers != current_version:
     print(Fore.RED + "You have an outdated version of the loader. Please update to the latest version.")
 print(Fore.LIGHTGREEN_EX + """
 
-                             $$\                                                      
-                            $$  |                                                     
-    $$$$$$\   $$$$$$\      $$  /$$\  $$\  $$\  $$$$$$\   $$$$$$\  $$$$$$$$\ $$\   $$\ 
-   $$  __$$\ $$  __$$\    $$  / $$ | $$ | $$ |$$  __$$\ $$  __$$\ \____$$  |$$ |  $$ |
-   $$ /  $$ |$$ /  $$ |  $$  /  $$ | $$ | $$ |$$$$$$$$ |$$$$$$$$ |  $$$$ _/ $$ |  $$ |
-   $$ |  $$ |$$ |  $$ | $$  /   $$ | $$ | $$ |$$   ____|$$   ____| $$  _/   $$ |  $$ |
-$$\\$$$$$$$ |\$$$$$$$ |$$  /    \$$$$$\$$$$  |\$$$$$$$\ \$$$$$$$\ $$$$$$$$\ \$$$$$$$ |
-\__|\____$$ | \____$$ |\__/      \_____\____/  \_______| \_______|\________| \____$$ |
-   $$\   $$ |$$\   $$ |                                                     $$\   $$ |
-   \$$$$$$  |\$$$$$$  |                                                     \$$$$$$  |
-    \______/  \______/                                                       \______/ 
-            
+
+  ██████  ██░ ██  ▄▄▄     ▄▄▄█████▓▄▄▄█████▓▓█████ ▓█████▄       ██▓     ▒█████   ██▓    
+▒██    ▒ ▓██░ ██▒▒████▄   ▓  ██▒ ▓▒▓  ██▒ ▓▒▓█   ▀ ▒██▀ ██▌     ▓██▒    ▒██▒  ██▒▓██▒    
+░ ▓██▄   ▒██▀▀██░▒██  ▀█▄ ▒ ▓██░ ▒░▒ ▓██░ ▒░▒███   ░██   █▌     ▒██░    ▒██░  ██▒▒██░    
+  ▒   ██▒░▓█ ░██ ░██▄▄▄▄██░ ▓██▓ ░ ░ ▓██▓ ░ ▒▓█  ▄ ░▓█▄   ▌     ▒██░    ▒██   ██░▒██░    
+▒██████▒▒░▓█▒░██▓ ▓█   ▓██▒ ▒██▒ ░   ▒██▒ ░ ░▒████▒░▒████▓  ██▓ ░██████▒░ ████▓▒░░██████▒
+▒ ▒▓▒ ▒ ░ ▒ ░░▒░▒ ▒▒   ▓▒█░ ▒ ░░     ▒ ░░   ░░ ▒░ ░ ▒▒▓  ▒  ▒▓▒ ░ ▒░▓  ░░ ▒░▒░▒░ ░ ▒░▓  ░
+░ ░▒  ░ ░ ▒ ░▒░ ░  ▒   ▒▒ ░   ░        ░     ░ ░  ░ ░ ▒  ▒  ░▒  ░ ░ ▒  ░  ░ ▒ ▒░ ░ ░ ▒  ░
+░  ░  ░   ░  ░░ ░  ░   ▒    ░        ░         ░    ░ ░  ░  ░     ░ ░   ░ ░ ░ ▒    ░ ░   
+      ░   ░  ░  ░      ░  ░                    ░  ░   ░      ░      ░  ░    ░ ░      ░  ░
+                                                    ░        ░                           
+
 """ + Fore.LIGHTWHITE_EX + """
 Selections: 
 1. Valorant TB (colorbot lookalike) 
@@ -52,7 +52,7 @@ if selection == "1":
     print(f"valorant triggerbot downloaded and extracted successfully in '{directory_name}'.")
     time.sleep(2)
 elif selection == "2":
-    print("Sorry, this option is not available yet. .gg/weezy for more updates")
+    print("Sorry, this option is not available yet. .gg/ahk for more updates")
     time.sleep(2)
 elif selection == "3":
     print("checking some shit...")
@@ -93,7 +93,7 @@ elif selection == "5":
         print(f"updated version in: '{directory_name}'.")
         time.sleep(2)
 elif selection == "6":
-    discord_url = "https://discord.gg/weezy"
+    discord_url = "https://discord.gg/ahk"
     webbrowser.open(discord_url)
     print("plez join if ur not in")
 else:
