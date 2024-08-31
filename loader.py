@@ -7,7 +7,7 @@ except ImportError:
     os.system("pip install colorama requests zipfile webbrowser ")
 print("all libraries installed and working, opening loader.")
 time.sleep(1)
-vers = 3
+vers = 2
 os.system("cls")
 
 current_version = requests.get("https://raw.githubusercontent.com/jaydnepic/b/main/bb.txt").json()
@@ -92,10 +92,11 @@ elif selection == "5":
         os.makedirs(directory_name, exist_ok=True)
         file_path = os.path.join(directory_name, "loader.py")
         with open(file_path, "wb") as file:
-        file.write(download.content)
-        subprocess.run(["python", file_path])
+            file.write(download.content)
+
         print(f"updated version in: '{directory_name}'.")
         time.sleep(2)
+        subprocess.run(["python", file_path])
 elif selection == "6":
     discord_url = "https://discord.gg/ahk"
     webbrowser.open(discord_url)
