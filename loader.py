@@ -1,13 +1,16 @@
+import time, uuid, zipfile, os
 try:
-    import os, colorama, requests, zipfile, uuid, time, webbrowser, subprocess
+    import requests, webbrowser, subprocess, fade, mss, keyboard, win32api, numpy
     from colorama import Fore
     from io import BytesIO
 except ImportError:
     print("Error: some required libraries are not installed. installing them.")
-    os.system("pip install colorama requests zipfile webbrowser ")
+    os.system("pip install colorama requests fade mss keyboard pywin32 numpy")
+    input("press enter to close...")
+    exit()
 print("all libraries installed and working, opening loader.")
 time.sleep(1)
-vers = 2
+vers = 3
 os.system("cls")
 
 current_version = requests.get("https://raw.githubusercontent.com/jaydnepic/b/main/bb.txt").json()
@@ -15,9 +18,8 @@ if vers == current_version:
     print(Fore.GREEN + "You have the latest version of the loader.")
 elif vers != current_version:
     print(Fore.RED + "You have an outdated version of the loader. Please update to the latest version.")
-print(Fore.LIGHTGREEN_EX + """
 
-
+logo = """
   ██████  ██░ ██  ▄▄▄     ▄▄▄█████▓▄▄▄█████▓▓█████ ▓█████▄       ██▓     ▒█████   ██▓    
 ▒██    ▒ ▓██░ ██▒▒████▄   ▓  ██▒ ▓▒▓  ██▒ ▓▒▓█   ▀ ▒██▀ ██▌     ▓██▒    ▒██▒  ██▒▓██▒    
 ░ ▓██▄   ▒██▀▀██░▒██  ▀█▄ ▒ ▓██░ ▒░▒ ▓██░ ▒░▒███   ░██   █▌     ▒██░    ▒██░  ██▒▒██░    
@@ -28,8 +30,11 @@ print(Fore.LIGHTGREEN_EX + """
 ░  ░  ░   ░  ░░ ░  ░   ▒    ░        ░         ░    ░ ░  ░  ░     ░ ░   ░ ░ ░ ▒    ░ ░   
       ░   ░  ░  ░      ░  ░                    ░  ░   ░      ░      ░  ░    ░ ░      ░  ░
                                                     ░        ░                           
+"""
+logoo = fade.water(logo)
+print(logoo)
 
-""" + Fore.LIGHTWHITE_EX + """
+sz = """
 Selections: 
 1. Valorant TB (colorbot lookalike) 
 2. Roblox TB (soon)
@@ -37,8 +42,10 @@ Selections:
 4. trolero
 5. Update Loader
 6. Discord Server
+"""
 
-""")
+szz = fade.greenblue(sz)
+print(szz)
 
 selection = input(Fore.LIGHTGREEN_EX + "> ")
 
