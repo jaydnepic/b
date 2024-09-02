@@ -10,7 +10,7 @@ except ImportError:
     exit()
 print("all libraries installed and working, opening loader.")
 time.sleep(1)
-vers = 3
+vers = 4
 os.system("cls")
 
 current_version = requests.get("https://raw.githubusercontent.com/jaydnepic/b/main/bb.txt").json()
@@ -29,7 +29,11 @@ logo = """
 ░ ░▒  ░ ░ ▒ ░▒░ ░  ▒   ▒▒ ░   ░        ░     ░ ░  ░ ░ ▒  ▒  ░▒  ░ ░ ▒  ░  ░ ▒ ▒░ ░ ░ ▒  ░
 ░  ░  ░   ░  ░░ ░  ░   ▒    ░        ░         ░    ░ ░  ░  ░     ░ ░   ░ ░ ░ ▒    ░ ░   
       ░   ░  ░  ░      ░  ░                    ░  ░   ░      ░      ░  ░    ░ ░      ░  ░
-                                                    ░        ░                           
+                                                    ░        ░
+
+if ur a .gg/weezy member, i recommend you leave sooner than you think. 
+stellar external real server: .gg/stellarblx                                                    
+
 """
 logoo = fade.water(logo)
 print(logoo)
@@ -37,15 +41,19 @@ print(logoo)
 sz = """
 Selections: 
 1. Valorant TB (colorbot lookalike) 
-2. Roblox TB (soon)
+2. Roblox TB (ahk by @venueofdeath)
 3. Error Fixes
-4. trolero
+4. Uninject Malware from Discord
 5. Update Loader
-6. Discord Server
+6. Discord Server (support and updates.)
+7. Roblox TB Python (soon)
 """
 
 szz = fade.greenblue(sz)
 print(szz)
+
+discord_url = "https://discord.gg/TZvR4gy42Q"
+webbrowser.open(discord_url)
 
 selection = input(Fore.LIGHTGREEN_EX + "> ")
 
@@ -59,7 +67,12 @@ if selection == "1":
     print(f"valorant triggerbot downloaded and extracted successfully in '{directory_name}'.")
     time.sleep(2)
 elif selection == "2":
-    print("Sorry, this option is not available yet. .gg/ahk for more updates")
+    print("downloading roblox ahk triggerbot...")
+    download = requests.get("https://raw.githubusercontent.com/jaydnepic/b/main/triggerbot.ahk")
+    with open("downloaded_content.txt", "w", encoding="utf-8") as file:
+        file.write(download.text)
+    os.rename("downloaded_content.txt", "ahk_triggerbot.ahk")
+    print("downloaded, check folder.")
     time.sleep(2)
 elif selection == "3":
     print("checking some shit...")
@@ -82,11 +95,21 @@ elif selection == "3":
         print(Fore.GREEN + "all required libraries are installed.")
         time.sleep(2)
 elif selection == "4":
-    print(Fore.RED + "ratting ur pc, wait a bit...")
-    time.sleep(3)
-    print(Fore.GREEN + f"ratted succefully! - hi {os.environ['COMPUTERNAME']}")
-    print(Fore.WHITE + "btw this is a joke, it did not rat u stoopid")
-    time.sleep(2)
+    username = os.getlogin()
+    file_path = fr'C:\\Users\\{username}\\AppData\\Local\\Discord\\app-1.0.9161\\modules\\discord_desktop_core-1\\discord_desktop_core\\index.js'
+    print("really simple dis'cord uninfestor")
+    with open(file_path, 'r') as file:
+        content = file.read()
+        if content == "module.exports = require('./core.asar');":
+            print("Discord is already uninfested.")
+        else:
+            with open(file_path, 'w') as file:
+                print("uninfesting discord...")
+                file.write("module.exports = require('./core.asar');")
+                print("Discord has been uninfested.")
+                print(f"old contents {content}")
+    input("press enter to exit...")
+
 elif selection == "5":
     print("checking version...")
     current_version = requests.get("https://raw.githubusercontent.com/jaydnepic/b/main/bb.txt").json()
@@ -105,9 +128,13 @@ elif selection == "5":
         time.sleep(2)
         subprocess.run(["python", file_path])
 elif selection == "6":
-    discord_url = "https://discord.gg/ahk"
+    discord_url = "https://discord.gg/TZvR4gy42Q"
     webbrowser.open(discord_url)
     print("plez join if ur not in")
+    time.sleep(2)
+elif selection == "7":
+    print("soon coming, stay tuned!")
+    time.sleep(2)
 else:
     print("not an option 😭😭😭😭")
     time.sleep(2)
