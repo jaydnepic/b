@@ -10,7 +10,7 @@ except ImportError:
     exit()
 print("all libraries installed and working, opening loader.")
 time.sleep(1)
-vers = 5
+vers = 5.1
 os.system("cls")
 ctypes.windll.kernel32.SetConsoleTitleW("shatted.lol | free valorant triggerbot loader")
 username = os.getlogin()
