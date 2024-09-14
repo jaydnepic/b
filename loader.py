@@ -33,7 +33,7 @@ logo = """
                                                     ░        ░
 
 if ur a .gg/weezy member, i recommend you leave sooner than you think. 
-stellar external real server: .gg/stellarblx                                                    
+stellar external real server: .gg/athenix                                                    
 
 """
 logoo = fade.water(logo)
